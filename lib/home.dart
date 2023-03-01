@@ -126,7 +126,7 @@ class _HomeState extends State<Home> {
                       children: [
                         Icon(Icons.school),
                         Text(
-                          "Educ ation",
+                          "Education",
                           style: TextStyle(fontSize: 10),
                         ),
                       ],
@@ -197,32 +197,6 @@ class _HomeState extends State<Home> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Text(
-                //   "Personal Information",
-                //   style: TextStyle(
-                //       color: Colors.blue, fontWeight: FontWeight.bold),
-                // ),
-                // Text(
-                //   "Let's get started with personal information",
-                //   style: TextStyle(color: Colors.blue),
-                // ),
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   children: [
-                //     Text(
-                //       "Add picture to your Resume",
-                //       style: TextStyle(fontSize: 15),
-                //     ),
-                //     Switch(
-                //       value: j,
-                //       onChanged: (value) {
-                //         setState(() {
-                //           j = value;
-                //         });
-                //       },
-                //     ),
-                //   ],
-                // ),
                 (j == true)
                     ? Row(
                         children: [
