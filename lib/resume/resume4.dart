@@ -220,14 +220,14 @@ Future<void> resume4(Model data4) async {
                       mainAxisAlignment: pw.MainAxisAlignment.center,
                       children: [
                         pw.Text(
-                          "Name",
+                    "${data4.firstname} ${data4.lastname}",
                           style: pw.TextStyle(
                               color: PdfColors.white,
                               fontSize: 25,
                               fontWeight: pw.FontWeight.bold),
                         ),
                         pw.Text(
-                          "Degree",
+                          "${data4.profession}",
                           style: pw.TextStyle(
                               color: PdfColors.white, fontSize: 18),
                         ),

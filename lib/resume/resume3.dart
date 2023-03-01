@@ -27,7 +27,7 @@ Future<void> resume3(Model data3) async {
               pw.Container(
                 height: 773,
                 width: 140,
-                color: PdfColors.pink500,
+                color: PdfColors.blue50,
                 child: pw.Padding(
                   padding: const pw.EdgeInsets.all(10),
                   child: pw.Column(
