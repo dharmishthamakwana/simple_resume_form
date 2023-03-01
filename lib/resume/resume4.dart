@@ -9,18 +9,20 @@ Future<void> resume4(Model data4) async {
   var pdf = pw.Document();
   var img;
 
-  if(data4.path!.isNotEmpty) {
+  if (data4.path!.isNotEmpty) {
     img = pw.MemoryImage(
       File('${data4.path}').readAsBytesSync(),
     );
   }
-  var img1=pw.MemoryImage((await rootBundle.load('assets/images/profile.png')).buffer.asUint8List());
+  var img1 = pw.MemoryImage((await rootBundle.load('assets/images/profile.png'))
+      .buffer
+      .asUint8List());
   pdf.addPage(
     pw.Page(
       margin: pw.EdgeInsets.all(10),
       orientation: pw.PageOrientation.portrait,
       pageFormat: PdfPageFormat.a4,
-      build: (context) =>pw.Stack(
+      build: (context) => pw.Stack(
         children: [
           pw.Row(
             children: [
@@ -134,24 +136,34 @@ Future<void> resume4(Model data4) async {
                             fontWeight: pw.FontWeight.bold,
                             fontSize: 18),
                       ),
-                      pw.SizedBox(height: 10,),
+                      pw.SizedBox(
+                        height: 10,
+                      ),
                       pw.Text(
                         "${data4.about}",
                         style: pw.TextStyle(color: PdfColors.black),
                       ),
-                      pw.SizedBox(height: 10,),
+                      pw.SizedBox(
+                        height: 10,
+                      ),
                       pw.Text(
                         "Year",
-                        style: pw.TextStyle(color: PdfColors.black,fontWeight: pw.FontWeight.bold),
+                        style: pw.TextStyle(
+                            color: PdfColors.black,
+                            fontWeight: pw.FontWeight.bold),
                       ),
                       pw.Text(
                         "${data4.sy} - ${data4.ey}",
                         style: pw.TextStyle(color: PdfColors.black),
                       ),
-                      pw.SizedBox(height: 10,),
+                      pw.SizedBox(
+                        height: 10,
+                      ),
                       pw.Text(
                         "Company Name & Location",
-                        style: pw.TextStyle(color: PdfColors.black,fontWeight: pw.FontWeight.bold),
+                        style: pw.TextStyle(
+                            color: PdfColors.black,
+                            fontWeight: pw.FontWeight.bold),
                       ),
                       pw.Text(
                         "I Work in ${data4.cname} , Which Located in ${data4.wcity}",
@@ -177,7 +189,9 @@ Future<void> resume4(Model data4) async {
                             fontWeight: pw.FontWeight.bold,
                             fontSize: 18),
                       ),
-                      pw.SizedBox(height: 10,),
+                      pw.SizedBox(
+                        height: 10,
+                      ),
                       pw.Text(
                         "${data4.skill}",
                         style: pw.TextStyle(color: PdfColors.black),
@@ -214,33 +228,35 @@ Future<void> resume4(Model data4) async {
                         ),
                         pw.Text(
                           "Degree",
-                          style:
-                          pw.TextStyle(color: PdfColors.white, fontSize: 18),
+                          style: pw.TextStyle(
+                              color: PdfColors.white, fontSize: 18),
                         ),
                       ],
                     ),
                   ),
-                  (data4.path!.isEmpty)?pw.Center(
-                    child: pw.Container(
-                      height: 120,
-                      width: 120,
-                      decoration: pw.BoxDecoration(
-                        shape: pw.BoxShape.circle,
-                        color: PdfColors.white,
-                        image: pw.DecorationImage(image: img1),
-                      ),
-                    ),
-                  ):pw.Center(
-                    child: pw.Container(
-                      height: 120,
-                      width: 120,
-                      decoration: pw.BoxDecoration(
-                        shape: pw.BoxShape.circle,
-                        color: PdfColors.white,
-                        image: pw.DecorationImage(image: img1),
-                      ),
-                    ),
-                  ),
+                  (data4.path!.isEmpty)
+                      ? pw.Center(
+                          child: pw.Container(
+                            height: 120,
+                            width: 120,
+                            decoration: pw.BoxDecoration(
+                              shape: pw.BoxShape.circle,
+                              color: PdfColors.white,
+                              image: pw.DecorationImage(image: img1),
+                            ),
+                          ),
+                        )
+                      : pw.Center(
+                          child: pw.Container(
+                            height: 120,
+                            width: 120,
+                            decoration: pw.BoxDecoration(
+                              shape: pw.BoxShape.circle,
+                              color: PdfColors.white,
+                              image: pw.DecorationImage(image: img1),
+                            ),
+                          ),
+                        ),
                 ],
               ),
             ),

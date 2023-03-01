@@ -68,9 +68,9 @@ class _HomeState extends State<Home> {
           children: [
             Container(
               height: 300,
-              width: 60,
+              width: 50,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(20),
                   bottomRight: Radius.circular(20),
                 ),
@@ -126,7 +126,7 @@ class _HomeState extends State<Home> {
                       children: [
                         Icon(Icons.school),
                         Text(
-                          "Educ ation",
+                          "Education",
                           style: TextStyle(fontSize: 10),
                         ),
                       ],
@@ -197,32 +197,6 @@ class _HomeState extends State<Home> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Text(
-                //   "Personal Information",
-                //   style: TextStyle(
-                //       color: Colors.blue, fontWeight: FontWeight.bold),
-                // ),
-                // Text(
-                //   "Let's get started with personal information",
-                //   style: TextStyle(color: Colors.blue),
-                // ),
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   children: [
-                //     Text(
-                //       "Add picture to your Resume",
-                //       style: TextStyle(fontSize: 15),
-                //     ),
-                //     Switch(
-                //       value: j,
-                //       onChanged: (value) {
-                //         setState(() {
-                //           j = value;
-                //         });
-                //       },
-                //     ),
-                //   ],
-                // ),
                 (j == true)
                     ? Row(
                         children: [
@@ -483,7 +457,6 @@ class _HomeState extends State<Home> {
                 SizedBox(
                   height: 15,
                 ),
-
                 ElevatedButton(
                   onPressed: () {
                     fname = txtname.text;
@@ -1077,7 +1050,7 @@ class _HomeState extends State<Home> {
                       Navigator.pushNamed(context, '2', arguments: m1);
                     },
                     child: Image.asset(
-                      "assets/images/resume2.jpg",
+                      "assets/images/resume.jpg",
                       fit: BoxFit.cover,
                       height: 280,
                       width: 200,
@@ -1117,9 +1090,9 @@ class _HomeState extends State<Home> {
                       Navigator.pushNamed(context, '3', arguments: m1);
                     },
                     child: Image.asset(
-                      "assets/images/resume3.jpg",
+                      "assets/images/resume4.jpg",
                       fit: BoxFit.cover,
-                      height: 280,
+                      height: 250,
                       width: 200,
                     ),
                   ),
@@ -1128,9 +1101,9 @@ class _HomeState extends State<Home> {
                   height: 20,
                 ),
                 Container(
-                  decoration: BoxDecoration(boxShadow: [
-                    BoxShadow(color: Colors.black, blurRadius: 2)
-                  ]),
+                  decoration: BoxDecoration(
+                    boxShadow: [BoxShadow(color: Colors.black, blurRadius: 2)],
+                  ),
                   child: InkWell(
                     onTap: () {
                       Model m1 = Model(
@@ -1157,7 +1130,7 @@ class _HomeState extends State<Home> {
                       Navigator.pushNamed(context, '4', arguments: m1);
                     },
                     child: Image.asset(
-                      "assets/images/resume4.jpg",
+                      "assets/images/resume3.png",
                       fit: BoxFit.cover,
                       height: 280,
                       width: 200,

@@ -19,6 +19,7 @@ class _Screen3State extends State<Screen3> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.pink.shade100,
           title: Text("Your CV"),
           actions: [
             InkWell(
@@ -37,7 +38,6 @@ class _Screen3State extends State<Screen3> {
                 Container(
                   height: 773,
                   width: 140,
-                  color: Color(0XFF2E75B7),
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: Column(
@@ -49,7 +49,7 @@ class _Screen3State extends State<Screen3> {
                         Text(
                           "CONTACT",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
@@ -58,22 +58,22 @@ class _Screen3State extends State<Screen3> {
                         ),
                         Text(
                           "Email",
-                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                         ),
                         Text(
                           "${data3.email}",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
                           "Contact No.",
-                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                         ),
                         Text(
                           "${data3.phone}",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                         SizedBox(
                           height: 30,
@@ -81,7 +81,7 @@ class _Screen3State extends State<Screen3> {
                         Text(
                           "EDUCATION",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
@@ -90,33 +90,33 @@ class _Screen3State extends State<Screen3> {
                         ),
                         Text(
                           "University name",
-                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                         ),
                         Text(
                           "${data3.uni}",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
                           "Passing Year",
-                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                         ),
                         Text(
                           "${data3.ypass}",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
                           "City",
-                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                         ),
                         Text(
                           "${data3.ecity}",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                       ],
                     ),
@@ -199,7 +199,7 @@ class _Screen3State extends State<Screen3> {
               child: Container(
                 height: 100,
                 width: 400,
-                color: Color(0xffB4C7E7),
+                color: Colors.pink.shade100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -228,13 +228,13 @@ class _Screen3State extends State<Screen3> {
                       height: 100,
                       width: 100,
                       alignment: Alignment.center,
-                      color: Color(0xffB4C7E7),
+                      color: Colors.pink.shade100,
                       child: (data3.j == true)
                           ? Image.file(File(data3.path!),height: 100,width: 100,fit: BoxFit.cover,)
                           : Image.asset(
-                        "assets/images/profile.png",
-                        height: 100,
-                        width: 100,
+                        "assets/images/profile.png",color: Colors.black,
+                        height: 90,
+                        width: 90,
                         fit: BoxFit.cover,
                       ),
                     ),
